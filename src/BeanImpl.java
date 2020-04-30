@@ -70,7 +70,7 @@ public class BeanImpl implements Bean {
 	public int nextXPos() {
 		if (isLuck) {
 			xpos += rand.nextInt(2);
-		} else if (rand.nextInt(slotCount) <= skillLevel) {
+		} else if (skillLevel-- != 0) {
 			xpos++;
 		}
 		return xpos;
